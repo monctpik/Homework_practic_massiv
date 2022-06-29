@@ -108,10 +108,14 @@ console.log(randomNumbers(5,33))
 const arr1 = [12, 15, 20, 25, 59, 79];
 
 const arithmeticAverage = function(arr1) {
-    return arr1.reduce(function(a,b){
-       return (a+b)
+if(arr1.length !== 0 ){    return (
+    arr1.reduce(function (prevNum, currentNum) {
+      return prevNum + currentNum;
     }) / arr1.length
- }
- 
+  );
+}
+return 'Error'
+};
+
  console.log(arithmeticAverage(arr1))
 
